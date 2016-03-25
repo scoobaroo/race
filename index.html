@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- set viewport to device width to allow responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS from CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css"
+    <!-- link to custom stylesheet (always require after Bootstrap) -->
+    <!---Javascript---->
+    <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <!-- jQuery from CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- link to custom javascript file (always require after external JS libraries) -->
+
+    <title>RACE</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1>Race!</h1>
+            <button type="button" class="btn btn-danger">Reset</button>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+
+        <!-- a column represents our game board -->
+        <!-- the `offset` class helps us center the board -->
+        <div class="col-md-6 col-md-offset-3">
+        <!-- <div class="col-md-12" id="boardpng"> -->
+          <!-- <img src="board.png"> -->
+        <!-- </div> -->
+          <!-- you can put rows inside of columns! -->
+          <!-- Bootstrap subdivides these 'nested' rows into 12 columns, too! -->
+          <div class="row">
+            <div class="col-md-4 box" id="top-left"></div>
+            <div class="col-md-4 box" id="top-mid"></div>
+            <div class="col-md-4 box" id="top-right"></div>
+          </div>
+          <div class="row">
+              <div class="col-md-4 box" id="mid-left"></div>
+              <div class="col-md-4 box" id="mid-mid"></div>
+              <div class="col-md-4 box" id="mid-right"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 box" id="bot-left"></div>
+            <div class="col-md-4 box" id="bot-mid"></div>
+            <div class="col-md-4 box" id="bot-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
