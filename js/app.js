@@ -20,26 +20,41 @@ $(document).on("ready", function(){
     $("#player2").css('margin-left',10);
   }));
 
-
   function example_animate(px) {
 	$('#player1').animate({
 		'marginLeft' : px
 	});
   }
 
-  $(document).keydown(function(e) {
-      if(e.which == 76) {
-          $('#player1').animate({
-              'marginLeft' : "+=200px"
-          });
+  $('#textbox').keypress(function(event){
+    console.log("textbox keypress");
+    if(event.keyCode === 76 || event.which=== 76) {
+        $('#player1').animate({
+            'marginLeft' : "+=200px"
+        });
+      }
+    });
 
-      }});
-  $(document).keydown(function(e) {
-      if(e.which == 65) {
+  $(document).keydown(function(event) {
+      console.log("document keypress");
+      if(event.keyCode === 76 || event.which=== 76) {
           $('#player2').animate({
-              'marginLeft' : "+=200px"
+              'marginLeft' : "+=40px"
           });
       }});
-});
 
-  $("#player1").css('margin-left',1375);
+  $(document).keydown(function(event) {
+      if(event.keyCode === 65 || event.which === 65) {
+          $('#player1').animate({
+              'marginLeft' : "+=40px"
+          });
+      }});
+
+  if ($("#player1").css('margin-left') >= 1375) {
+    alert ("Player 1 won");
+  }
+
+  if ($("#player2").css('margin-left') >= 1375) {
+    alert ("Player 2 won");
+  }
+});
