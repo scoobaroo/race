@@ -16,8 +16,8 @@ $(document).on("ready", function(){
   // $("button").on("click", $("#player1").css('left',30));
   if($("button").on("click", function(event){
     console.log("reset clicked");
-    $("#player1").css('margin-left',10);
-    $("#player2").css('margin-left',10);
+    $("#player1").css('margin-left',30);
+    $("#player2").css('margin-left',30);
   }));
 
   function example_animate(px) {
@@ -49,12 +49,16 @@ $(document).on("ready", function(){
               'marginLeft' : "+=40px"
           });
       }});
-
-  if ($("#player1").css('margin-left') >= 1375) {
-    alert ("Player 1 won");
-  }
-
-  if ($("#player2").css('margin-left') >= 1375) {
-    alert ("Player 2 won");
-  }
+  $(document).keydown(function(event){
+    var a = parseInt($("#player1").css('margin-left'));
+    if (a>1350) {
+      alert("player 1 wins!");
+    }
+  });
+  $(document).keydown(function(event){
+    var b = parseInt($("#player2").css('margin-left'));
+    if (b>1350) {
+      alert("player 2 wins!");
+    }
+  });
 });
