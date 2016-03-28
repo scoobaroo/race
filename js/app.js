@@ -49,13 +49,13 @@ $(document).on("ready", function(){
               'marginLeft' : "+=40px"
           });
       }});
-  $(document).keydown(function(event){
+  $(document).keyup(function(event){
     var a = parseInt($("#player1").css('margin-left'));
     if (a>1350) {
       alert("player 1 wins!");
     }
   });
-  $(document).keydown(function(event){
+  $(document).keyup(function(event){
     var b = parseInt($("#player2").css('margin-left'));
     if (b>1350) {
       alert("player 2 wins!");
