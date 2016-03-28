@@ -26,7 +26,7 @@ $(document).on("ready", function(){
 	});
   }
 
-  $('#textbox').keypress(function(event){
+  $('#textbox').keyup(function(event){
     console.log("textbox keypress");
     if(event.keyCode === 76 || event.which=== 76) {
         $('#player1').animate({
@@ -35,7 +35,7 @@ $(document).on("ready", function(){
       }
     });
 
-  $(document).keydown(function(event) {
+  $(document).keyup(function(event) {
       console.log("document keypress");
       if(event.keyCode === 76 || event.which=== 76) {
           $('#player2').animate({
@@ -43,7 +43,7 @@ $(document).on("ready", function(){
           });
       }});
 
-  $(document).keydown(function(event) {
+  $(document).keyup(function(event) {
       if(event.keyCode === 65 || event.which === 65) {
           $('#player1').animate({
               'marginLeft' : "+=40px"
